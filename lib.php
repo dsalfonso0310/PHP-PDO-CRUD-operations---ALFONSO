@@ -1,5 +1,5 @@
 <?php
-// db.php - Database connection using PDO
+// db.php - Database connection
 $host = 'localhost';
 $dbname = 'shoot';
 $username = 'root';
@@ -14,7 +14,7 @@ try {
 
 session_start();
 
-// Handle all CRUD operations
+//CRUD operations
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['login'])) {
         $email = $_POST['email'];
@@ -370,7 +370,7 @@ if (isset($_SESSION['user_id'])) {
         </div>
         
         <script>
-            // Simple tab switching for auth forms
+            //Switching for auth forms
             document.querySelectorAll('.auth-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
                     document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
